@@ -1,0 +1,76 @@
+@import "../../App.scss";
+.navbar{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    height: 60px;
+    position: relative;
+    z-index: 999;
+    transition: $transition;
+
+    .navbar-brand-text{
+        margin-left: 5px;
+    }
+    .navbar-search-btn{
+        margin-right: 12px;
+    }
+}
+
+.scrolled{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header{
+    .header-content{
+        height: 400px;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url("../../assets/images/header_image.jpg") center/cover no-repeat;
+    }
+    .header-title{
+        margin-top: 2.4rem;
+    }
+}
+
+.search-form{
+    .form-control-input{
+        box-shadow: 0 4px 10px rgb(0 0 0 / 12%), 0 0 1px rgb(0 0 0 / 5%) inset;
+        min-width: 300px;
+        font-size: 16px;
+        height: 55px;
+        padding: 0px 3.2rem;
+        border-radius: 2.8rem!important;
+        margin-right: 1.2rem;
+    }
+    .form-submit-btn{
+        width: 55px;
+        height: 55px;
+        background-color: $clr-orange;
+        border-radius: 50%;
+        position: relative;
+        transition: $transition;
+
+        .btn-icon{
+            transition: $transition;
+        }
+
+        &:after{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            border: 1px solid $clr-white;
+            border-radius: 50%;
+        }
+
+        &:hover{
+            .btn-icon{
+                transform: scale(0.9);
+                color: $clr-orange;
+            }
+            background: $clr-white;
+        }
+    }
+}

@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// variables
+$clr-black: #000;
+$clr-white: #fff;
+$font-raleway: 'Raleway', sans-serif;
+$clr-orange: #E16120;
+$clr-dark-orange: #C5541A;
+$clr-green: #3A9691;
+$clr-gray: #707070;
+$clr-dark-gray: #434343;
+$clr-dark: #232323;
+$clr-whitesmoke: #f5f5f5;
+$transition: all 300ms ease-in-out;
+
+// global styles & resets
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html{
+  font-size: 10px;
+}
+
+body{
+  -webkit-font-smoothing: antialiased;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: $clr-black;
+  font-family: $font-raleway;
+}
+
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+img{
+  width: 100%;
+  display: block;
+}
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+button{
+  cursor: pointer;
+  outline: 0;
+  border: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 1.8rem;
+}
+input, textarea, select{
+  outline: 0;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 1.6rem;
+}
+
+/* custom utility classes */
+.container{
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* flexbox and grid */
+.flex{
+  display: flex;
+  &-column{ flex-direction: column;}
+  &-wrap{flex-wrap: wrap;}
+}
+.align{
+  &-center{align-items: center;}
+  &-start{align-items: flex-start;}
+  &-end{align-items: flex-end;}
+  &-stretch{align-items: stretch;}
+}
+.justify{
+  &-center{justify-content: center;}
+  &-between{ justify-content: space-between;}
+  &-start{ justify-content: flex-start;}
+  &-end{ justify-content: flex-end;}
+}
+.grid{ display: grid; }
+
+/* height and width */
+.h-100{height: 100%;}
+.w-100{width: 100%;}
+
+/* text align, transformation & colors */
+.text{
+  &-center{text-align: center;}
+  &-start{text-align: left;}
+  &-end{text-align: right;}
+  &-justify{text-align: justify;}
+  &-uppercase{text-transform: uppercase;}
+  &-capitalize{text-transform: capitalize;}
+  &-white{color: $clr-white;}
+  &-black{color: $clr-black;}
+  &-orange{color: $clr-orange;}
+  &-green{color: $clr-green;}
+  &-gray{color: $clr-gray;}
+  &-dark-gray{color: $clr-dark-gray;}
+  &-dark{color: $clr-dark;}
+  &-whitesmoke{color: $clr-whitesmoke;}
+}
+.bg{
+  &-black{background-color: $clr-black;}
+  &-white{background-color: $clr-white;}
+  &-orange{background-color: $clr-orange;}
+  &-green{background-color: $clr-green;}
+  &-gray{background-color: $clr-gray;}
+  &-dark-gray{background-color: $clr-dark-gray;}
+  &-dark{background-color: $clr-dark;}
+  &-whitesmoke{background-color: $clr-whitesmoke;}
+}
+
+/* font weights */
+.fw{
+  &-1{font-weight: 100;}
+  &-2{font-weight: 200;}
+  &-3{font-weight: 300;}
+  &-4{font-weight: 400;}
+  &-5{font-weight: 500;}
+  &-6{font-weight: 600;}
+  &-7{font-weight: 700;}
+  &-8{font-weight: 800;}
+  &-9{font-weight: 900;}
+}
+
+/* common font sizes */
+.fs{
+  &-11{font-size: 11px;}
+  &-12{font-size: 12px;}
+  &-13{font-size: 13px;}
+  &-14{font-size: 14px;}
+  &-15{font-size: 15px;}
+  &-16{font-size: 16px;}
+  &-17{font-size: 17px;}
+  &-18{font-size: 18px;}
+  &-19{font-size: 19px;}
+  &-20{font-size: 20px;}
+  &-21{font-size: 21px;}
+  &-22{font-size: 22px;}
+  &-23{font-size: 23px;}
+  &-24{font-size: 24px;}
+  &-25{font-size: 25px;}
+  &-26{font-size: 26px;}
+}
+
+/* letter spacing */
+.ls-1{letter-spacing: 1px;}
+.ls-2{letter-spacing: 2px;}
+
+/* margin and padding */
+.mx-auto{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.py-1{padding-top: 4px; padding-bottom: 4px;}
+.py-2{padding-top: 8px; padding-bottom: 8px;}
+.py-3{padding-top: 16px; padding-bottom: 16px;}
+.py-4{padding-top: 24px; padding-bottom: 24px;}
+.py-5{padding-top: 48px; padding-bottom: 48px;}
+.py-6{padding-top: 60px; padding-bottom: 60px;}
+.py-7{padding-top: 72px; padding-bottom: 72px;}
+
+.px-1{padding-left: 4px; padding-right: 4px;}
+.px-2{padding-left: 8px; padding-right: 8px;}
+.px-3{padding-left: 16px; padding-right: 16px;}
+.px-4{padding-left: 24px; padding-right: 24px;}
+.px-5{padding-left: 48px; padding-right: 48px;}
+.px-6{padding-left: 60px; padding-right: 60px;}
+.px-7{padding-left: 72px; padding-right: 72px;}
+
+.my-1{margin-top: 4px; margin-bottom: 4px;}
+.my-2{margin-top: 8px; margin-bottom: 8px;}
+.my-3{margin-top: 16px; margin-bottom: 16px;}
+.my-4{margin-top: 24px; margin-bottom: 24px;}
+.my-5{margin-top: 48px; margin-bottom: 48px;}
+.my-6{margin-top: 60px; margin-bottom: 60px;}
+
+.mx-1{margin-left: 4px; margin-right: 4px;}
+.mx-2{margin-left: 8px; margin-right: 8px;}
+.mx-3{margin-left: 16px; margin-right: 16px;}
+.mx-4{margin-left: 24px; margin-right: 24px;}
+.mx-5{margin-left: 48px; margin-right: 48px;}
+.mx-6{margin-left: 60px; margin-right: 60px;}
+
+// section
+.main-holder{
+  overflow-x: hidden;
+}
+.section-wrapper{
+  padding: 80px 0;
+}
+.sc-title{
+  text-transform: uppercase;
+  margin-bottom: 4.8rem;
+  font-weight: bold;
+  letter-spacing: 4px;
+  position: relative;
+  font-size: 24px;
+  padding: 4px 0;
+  position: relative;
+
+  &::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 4px;
+    width: 80px;
+    background-color: $clr-orange;
+  }
+}
+
+// opacity
+.op{
+  &-01{ opacity: 0.1;}
+  &-02{ opacity: 0.2;}
+  &-03{ opacity: 0.3;}
+  &-04{ opacity: 0.4;}
+  &-05{ opacity: 0.5;}
+  &-06{ opacity: 0.6;}
+  &-07{ opacity: 0.7;}
+  &-08{ opacity: 0.8;}
+  &-09{ opacity: 0.9;}
+}
+
+.breadcrumb{
+  box-shadow: rgba(99, 99, 99, 0.1) 0px 2px 8px 0px;
+  padding: 1rem 2rem;
+  margin-bottom: 3.2rem;
+
+  li{
+    transition: $transition;
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+}
