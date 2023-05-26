@@ -16,7 +16,7 @@ const MealSingle = ({meal}) => {
   return (
     <div className='section-wrapper'>
       <div className='container'>
-        <div className='breadcrumb bg-orange text-white'>
+        <div className='breadcrumb bg-green text-white'>
           <ul className='flex align-center my-2'>
             <li className='breadcrumb-item'>
               <Link to = "/" className='flex align-center'>
@@ -40,7 +40,7 @@ const MealSingle = ({meal}) => {
             </div>
 
             <div className='details-intro'>
-              <h3 className='title text-orange'>{meal?.title}</h3>
+              <h3 className='title text-green'>{meal?.title}</h3>
               <div className='py-4'>
                 <div className='category flex align-center'>
                   <span className='text-uppercase fw-8 ls-1 my-1'>category: &nbsp;</span>
@@ -87,7 +87,7 @@ const MealSingle = ({meal}) => {
                 {
                   meal?.measures?.map((measure, idx) => (
                     <li key = {idx} className = "fs-14 flex align-end">
-                      <span className='li-icon fs-12 text-orange'>
+                      <span className='li-icon fs-12 text-green'>
                         <FaUtensilSpoon />
                       </span>
                       <span className='li-text fs-15 fw-6 op-09'>{measure}</span>
@@ -103,7 +103,7 @@ const MealSingle = ({meal}) => {
                 {
                   instructions?.map((instruction, idx) => (
                     <li key = {idx} className = "fs-14">
-                      <AiOutlineCheckSquare size = {18} className = "text-orange li-icon" />
+                      <AiOutlineCheckSquare size = {18} className = "text-green li-icon" />
                       <span className='li-text fs-16 fw-5 op-09'>{instruction}</span>
                     </li>
                   ))

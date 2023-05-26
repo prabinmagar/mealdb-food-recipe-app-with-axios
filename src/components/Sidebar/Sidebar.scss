@@ -20,7 +20,7 @@
     .navbar-hide-btn{
         position: absolute;
         right: 14px;
-        color: $clr-orange;
+        color: $clr-green;
         transition: $transition;
 
         &:hover{
@@ -39,7 +39,7 @@
                     opacity: 0.9;
                     transition: $transition;
                     &:hover{
-                        color: $clr-orange;
+                        color: $clr-green;
                     }
                 }
             }
